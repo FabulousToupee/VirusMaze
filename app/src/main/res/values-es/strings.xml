@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">VirusMaze</string>
+    <string name="play">Jugar</string>
+    <string name="highestScores">Mejor puntuacion</string>
+    <string name="menu">Menu</string>
+    <string name="resume">Continuar</string>
+    <string name="pause">Pausa</string>
+    <string name="help">Ayuda</string>
+    <string name="about">Sobre</string>
+    <string name="exit">Salir</string>
+    <string name="aboutText">VirusMaze es un juego gratuito que surgió como una forma de iluminar a la población general sobre la necesidad
+        e importancia de la vacunación como una forma de prevención y contención de la propagación de virus.\n\n
+
+        Para jugar, debes iniciar sesión con una cuenta creada previamente o con tu cuenta Google. \n
+
+        Si no tienes una cuenta, puedes crear una dejando en blanco todos los campos de la página de inicio de sesión. \n
+
+    </string>
+    <string name="settings">Ajustes</string>
+    <string name="howToPlayLabel">Como jugar</string>
+    <string name="howToPlay">Dr.Pacman, nuestro héroe, se abre paso por el laberinto en busca de la vacuna que lo salvará del peligroso virus que esta por llegar.\n
+        El tendrá algunos segundos para prepararse para cada laberinto. Cuando el tiempo de preparación acabe se podrá mover para libremente para encontrar la vacuna.\n
+        Cuantos mas niveles sean superados, el juego se dificultará .\n
+        ¡Date prisa!
+        </string>
+    <string name="controlsLabel">Controles</string>
+    <string name="controls">Puedes controlar el personaje deslizando en cualquier sitio de la pantalla.\n
+        Subir: Deslizar para arriba\n Bajar: Deslizar para abajo\nIzquierda: Deslizar para la izquierda\nDerecha: Deslizar para la derecha\n
+    </string>
+    <string name="settingsTitle">Ajustes</string>
+    <string name="musicButton">Musica</string>
+    <string name="levelDifficulty">Dificultad</string>
+    <string name="easyDifficulty">Fácil</string>
+    <string name="mediumDifficulty">Médio</string>
+    <string name="hardDifficulty">Dificil</string>
+    <string name="expertDifficulty">Experto</string>
+    <string name="logout">Logout</string>
+    <string name="loginAndRegister">Login/Registrar</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="register">Registrar</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+
+    <string name="timeLeft">Tiempo</string>
+    <string name="timeUnits">Segundos</string>
+    <string name="areYouSure">¿Estas seguro? Tu puntaje no se guardará.</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="gameOver">Game Over</string>
+    <string name="score">Puntos</string>
+    <string name="preparationPhase">Fase de preparacion</string>
+    <string name="playingPhase">Fase de juego</string>
+    <string name="level">Nível</string>
+
+    <string name="colors">Colores</string>
+    <string name="doubleScore">Doble puntaje</string>
+    <string name="halfScore">Mitad del puntaje</string>
+</resources>

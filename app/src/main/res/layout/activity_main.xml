@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/MainMenuImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/mainmenu"
+        android:scaleType="fitXY"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/MainMenuImage">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="monospace"
+            android:gravity="center|top"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#DA1414"
+            android:textSize="50sp"
+            android:textStyle="bold"/>
+
+
+
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="fill_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_height="55dp"
+            android:autofillHints="Email"
+            android:textAlignment="center"
+            android:ems="10"
+            android:hint="@string/email"
+            android:background="@color/white"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/passwordField"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:autofillHints="Password"
+            android:textAlignment="center"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/loginAndRegister"
+            android:onClick="startSignInEmailAndPassword"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button_google"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:onClick="showAboutScreen"
+            android:layout_marginBottom="5dp"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

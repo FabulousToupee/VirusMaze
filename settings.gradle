@@ -1,0 +1,2 @@
+rootProject.name='VirusMaze'
+include ':app'

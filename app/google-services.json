@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "766864101830",
+    "firebase_url": "https://virusmaze-bb1cc.firebaseio.com",
+    "project_id": "virusmaze-bb1cc",
+    "storage_bucket": "virusmaze-bb1cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766864101830:android:a939ca9d12ed515345e2c7",
+        "android_client_info": {
+          "package_name": "dam_45133.virusmaze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766864101830-ca73olbsc6ioorn0il31gjcnehomlhca.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dam_45133.virusmaze",
+            "certificate_hash": "276a103a4b842352f14af1db99347cd5d50846d8"
+          }
+        },
+        {
+          "client_id": "766864101830-bp735mp7eshs63pjq11k8bakd2ntq0c0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuiMKQh6a6z_i--Ic_VzVPSw9809wZ-l0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766864101830-bp735mp7eshs63pjq11k8bakd2ntq0c0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
