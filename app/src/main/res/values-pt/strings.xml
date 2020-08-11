@@ -13,14 +13,14 @@
 
         Para jogar, deves estar iniciar sessão com uma conta criada anteriormente ou com tua conta Google. \n
 
-        Se não tiveres uma conta, poderás criar uma deixando todos os campos na página de inicio de sessão em branco. \n
+        Se não tiveres uma conta, poderás criar uma deixando todos os campos na página de início de sessão em branco. \n
 
     </string>
     <string name="settings">Definições</string>
     <string name="howToPlayLabel">Como jogar</string>
     <string name="howToPlay">Dr. Pacman, nosso herói, percorre o labirinto em busca da vacina que o salvará do vírus perigoso que está a chegar.\n
         Ele terá alguns segundos para preparar-se para cada labirinto. Quando o tempo acaba poderá mexer-se livremente para encontrar a vacina. \n
-        Quantos mais labirintos sejam resolvidos, tornar-se-á mais dificil.\n
+        Quantos mais labirintos sejam resolvidos, tornar-se-á mais difícil.\n
         Despacha-te!
         </string>
     <string name="controlsLabel">Comandos</string>
@@ -28,11 +28,11 @@
         Subir: Deslizar para cima\nDescer: Deslizar para baixo\nEsquerda: Deslizar para a esquerda\nDireita: Deslizar para a direita\n
     </string>
     <string name="settingsTitle">Definições</string>
-    <string name="musicButton">Musica</string>
+    <string name="musicButton">Música</string>
     <string name="levelDifficulty">Dificuldade</string>
     <string name="easyDifficulty">Fácil</string>
     <string name="mediumDifficulty">Médio</string>
-    <string name="hardDifficulty">Dificil</string>
+    <string name="hardDifficulty">Difícil</string>
     <string name="expertDifficulty">Especialista</string>
     <string name="logout">Logout</string>
     <string name="loginAndRegister">Login/Registar</string>

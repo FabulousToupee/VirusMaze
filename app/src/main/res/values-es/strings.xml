@@ -28,11 +28,11 @@
         Subir: Deslizar para arriba\n Bajar: Deslizar para abajo\nIzquierda: Deslizar para la izquierda\nDerecha: Deslizar para la derecha\n
     </string>
     <string name="settingsTitle">Ajustes</string>
-    <string name="musicButton">Musica</string>
+    <string name="musicButton">Música</string>
     <string name="levelDifficulty">Dificultad</string>
     <string name="easyDifficulty">Fácil</string>
     <string name="mediumDifficulty">Médio</string>
-    <string name="hardDifficulty">Dificil</string>
+    <string name="hardDifficulty">Difícil</string>
     <string name="expertDifficulty">Experto</string>
     <string name="logout">Logout</string>
     <string name="loginAndRegister">Login/Registrar</string>

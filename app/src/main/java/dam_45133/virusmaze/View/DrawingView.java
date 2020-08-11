@@ -114,20 +114,20 @@ public class DrawingView extends SurfaceView{
     public void drawUserInterface(Canvas canvas, final Paint paint){
         paint.setTextSize(80f);
         paint.setColor(GameConstants.MAZE_COLOR);
-        if(!player.isCanMove()) drawTextAtXCenter(canvas,paint,getResources().getString(R.string.preparationPhase),(screenHeight - GameConstants.ROWS * cellSize) / 12);
-        else  drawTextAtXCenter(canvas,paint,getResources().getString(R.string.playingPhase),(screenHeight - GameConstants.ROWS * cellSize) / 12);
+        if(!player.isCanMove()) drawTextAtXCenter(canvas,paint,getResources().getString(R.string.preparationPhase),(screenHeight - GameConstants.ROWS * cellSize) / 12f);
+        else  drawTextAtXCenter(canvas,paint,getResources().getString(R.string.playingPhase),(screenHeight - GameConstants.ROWS * cellSize) / 12f);
 
         paint.setTextSize(52f);
         canvas.drawText(getResources().getString(R.string.levelDifficulty) + ": " + GameConstants.getGameDifficultyInSystemLanguage(),
-                (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 7f,paint);
+                (screenWidth - GameConstants.COLS * cellSize) / 2f,(screenHeight - GameConstants.ROWS * cellSize) / 7f,paint);
         canvas.drawText(getResources().getString(R.string.timeLeft) + ": " + GameConstants.TIME_LEFT + " " + getResources().getString(R.string.timeUnits),
-                (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 5f,paint);
+                (screenWidth - GameConstants.COLS * cellSize) / 2f,(screenHeight - GameConstants.ROWS * cellSize) / 5f,paint);
 
         canvas.drawText(getResources().getString(R.string.level) + ": " + GameConstants.CURRENT_LEVEL,
-                (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 4f,paint);
+                (screenWidth - GameConstants.COLS * cellSize) / 2f,(screenHeight - GameConstants.ROWS * cellSize) / 4f,paint);
         paint.setTextSize(80f);
         canvas.drawText(getResources().getString(R.string.score) + ": " + GameConstants.SCORE,
-                (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 2.5f,paint);
+                (screenWidth - GameConstants.COLS * cellSize) / 2f,(screenHeight - GameConstants.ROWS * cellSize) / 2.5f,paint);
 
 
 
