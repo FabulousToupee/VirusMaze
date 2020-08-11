@@ -54,5 +54,6 @@
     <string name="doubleScore">Double Score</string>
     <string name="halfScore">Half Score</string>
     <string name="mute">Mute</string>
+    <string name="wait">Please wait</string>
 
 </resources>

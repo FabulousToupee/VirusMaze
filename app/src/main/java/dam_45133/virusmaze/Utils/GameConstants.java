@@ -2,6 +2,7 @@ package dam_45133.virusmaze.Utils;
 
 import android.graphics.Color;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import dam_45133.virusmaze.Activities.PlayActivity;
@@ -16,7 +17,6 @@ public class GameConstants {
     public static long TIME_LEFT = PREPARATION_TIME;
     public static int ROWS = 15;
     public static int COLS = 15;
-
 
     public final static int TOTAL_FRAMES = 4;
     public final static int WALL_THICKNESS = 4;
@@ -54,6 +54,8 @@ public class GameConstants {
         GameConstants.COLS = 10;
         GameConstants.LEVEL_TIME = 40000;
         GameConstants.SCORE_MULTIPLIER = 1;
+        randomizeSpawn();
+        randomizeBoostLocation();
     }
     private static void setDifficultyMedium(){
         GameConstants.DIFFICULTY = "Medium";
@@ -61,6 +63,8 @@ public class GameConstants {
         GameConstants.COLS = 15;
         GameConstants.LEVEL_TIME = 60000;
         GameConstants.SCORE_MULTIPLIER = 2;
+        randomizeSpawn();
+        randomizeBoostLocation();
     }
     private static void setDifficultyHard(){
         GameConstants.DIFFICULTY = "Hard";
@@ -68,6 +72,8 @@ public class GameConstants {
         GameConstants.COLS = 20;
         GameConstants.LEVEL_TIME = 90000;
         GameConstants.SCORE_MULTIPLIER = 3;
+        randomizeSpawn();
+        randomizeBoostLocation();
     }
     private static void setDifficultyExpert(){
         GameConstants.DIFFICULTY = "Expert";
@@ -75,25 +81,30 @@ public class GameConstants {
         GameConstants.COLS = 25;
         GameConstants.LEVEL_TIME = 120000;
         GameConstants.SCORE_MULTIPLIER = 4;
+        randomizeSpawn();
+        randomizeBoostLocation();
     }
 
     public static void randomizeSpawn(){
-        int[] NUMBERS = new int[]{0,14};
+        int[] NUMBERS = new int[]{0,GameConstants.ROWS - 1};
         int rnd = new Random().nextInt(NUMBERS.length);
         GameConstants.STARTER_X = NUMBERS[rnd];
         int rnd2 = new Random().nextInt(NUMBERS.length);
         GameConstants.STARTER_Y = NUMBERS[rnd2];
 
-        GameConstants.VACCINE_X = (STARTER_X == 14) ? 0 : 14;
-        GameConstants.VACCINE_Y = (STARTER_Y == 14) ? 0 : 14;
+        GameConstants.VACCINE_X = (STARTER_X == GameConstants.ROWS - 1) ? 0 : GameConstants.ROWS - 1;
+        GameConstants.VACCINE_Y = (STARTER_Y == GameConstants.ROWS - 1) ? 0 : GameConstants.ROWS - 1;
     }
 
     public static void randomizeBoostLocation(){
-        int[] NUMBERS_BOOST = new int[]{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};
-        int rnd3 = new Random().nextInt(NUMBERS_BOOST.length);
-        BOOST_X = NUMBERS_BOOST[rnd3];
-        int rnd4 = new Random().nextInt(NUMBERS_BOOST.length);
-        BOOST_Y = NUMBERS_BOOST[rnd4];
+        ArrayList<Integer> NUMBERS_BOOST = new ArrayList<>();
+        for(int i = 0; i< GameConstants.ROWS - 1; i++){
+            NUMBERS_BOOST.add(i);
+        }
+        int rnd = new Random().nextInt(NUMBERS_BOOST.size());
+        BOOST_X = NUMBERS_BOOST.get(rnd);
+        int rnd2 = new Random().nextInt(NUMBERS_BOOST.size());
+        BOOST_Y = NUMBERS_BOOST.get(rnd2);
 
     }
 
