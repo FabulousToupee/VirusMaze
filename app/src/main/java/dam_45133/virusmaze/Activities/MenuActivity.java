@@ -42,7 +42,7 @@ public class MenuActivity  extends AppCompatActivity {
     public void signOut(View view){
         if(firebaseAuth.getCurrentUser() != null) {
             firebaseAuth.signOut();
-            Toast.makeText(MenuActivity.this, "Bye! See you next time.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MenuActivity.this, getResources().getString(R.string.goodbye), Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MenuActivity.this, MainActivity.class));
         }
     }
@@ -78,7 +78,7 @@ public class MenuActivity  extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (firebaseAuth.getCurrentUser() != null)
-            Toast.makeText(MenuActivity.this, "Please logout to do that", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MenuActivity.this, getResources().getString(R.string.pleaselogout), Toast.LENGTH_SHORT).show();
     }
 
     @Override

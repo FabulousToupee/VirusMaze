@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">VirusMaze</string>
+    <string name="app_name" translatable="false">Virus Maze</string>
     <string name="play">Play</string>
     <string name="highestScores">High Score</string>
-    <string name="menu">Menu</string>
+    <string name="menu" translatable="false">Menu</string>
     <string name="resume">Resume</string>
     <string name="pause">Pause</string>
     <string name="help">Help</string>
@@ -16,25 +16,25 @@
         If you don\'t have an account you can create one by leaving all fields in the login page blank.\n
     </string>
     <string name="settings">Settings</string>
-    <string name="howToPlayLabel">HOW TO PLAY</string>
+    <string name="howToPlayLabel">How to play</string>
     <string name="howToPlay">Dr.Pacman, our hero, munches his way around the maze in a quest to find the vaccine that will save him from the dangerous virus that is coming.\n
         He\'ll have some time to prepare for each maze. When the time ends he will be able to move in order to solve the maze\n
         As he progresses in mazes it will become harder to succeed. \n
         Hurry!</string>
-    <string name="controlsLabel">CONTROLS</string>
+    <string name="controlsLabel">Controls</string>
     <string name="controls">You can control the character by swiping anywhere on the screen.\n
         Up: Swipe Up\nDown: Swipe Down\nLeft: Swipe Left\nRight: Swipe Right\n
     </string>
-    <string name="settingsTitle">SETTINGS</string>
+    <string name="settingsTitle">Settings</string>
     <string name="musicButton">Music</string>
     <string name="levelDifficulty">Difficulty</string>
     <string name="easyDifficulty">Easy</string>
     <string name="mediumDifficulty">Medium</string>
     <string name="hardDifficulty">Hard</string>
     <string name="expertDifficulty">Expert</string>
-    <string name="logout">Logout</string>
+    <string name="logout" translatable="false">Logout</string>
     <string name="loginAndRegister">Login/Register</string>
-    <string name="email">Email</string>
+    <string name="email" translatable="false">Email</string>
     <string name="password">Password</string>
     <string name="register">Register</string>
     <string name="confirmPassword">Confirm password</string>
@@ -44,7 +44,7 @@
     <string name="areYouSure">Are you sure?\n Your score won\'t be saved.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="gameOver">Game Over</string>
+    <string name="gameOver" translatable="false">Game Over</string>
     <string name="score">Score</string>
     <string name="preparationPhase">Preparation phase</string>
     <string name="playingPhase">Playing phase</string>
@@ -53,7 +53,15 @@
     <string name="colors">Colors</string>
     <string name="doubleScore">Double Score</string>
     <string name="halfScore">Half Score</string>
-    <string name="mute">Mute</string>
+    <string name="mute" translatable="false">Mute</string>
     <string name="wait">Please wait</string>
+    <string name="pleaselogout">Please logout</string>
+    <string name="pleaselogin">Please login</string>
+
+    <string name="greeting">Hello!</string>
+    <string name="goodbye">Bye! See you next time.</string>
+    <string name="error">Something went wrong</string>
+    <string name="emptyFields">Please fill in all the fields</string>
+    <string name="credentialsError">Wrong credentials</string>
 
 </resources>

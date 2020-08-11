@@ -34,7 +34,6 @@ public class ScoresActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private Query myTopPostsQuery;
-    String difficulty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

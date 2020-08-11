@@ -89,11 +89,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onBackPressed() {
         if (firebaseAuth.getCurrentUser() == null)
-            Toast.makeText(MainActivity.this, "Please login", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, getResources().getString(R.string.pleaselogin), Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Toast.makeText(MainActivity.this,"Connection Failed, " + connectionResult.getErrorMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,getResources().getString(R.string.error) +  ", " + connectionResult.getErrorMessage(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 if(account != null)
                     firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
-                Toast.makeText(MainActivity.this, "Google Sign in failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getResources().getString(R.string.error), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             startActivity(new Intent(MainActivity.this, RegisterActivity.class));
         }
         else if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
-            Toast.makeText(MainActivity.this,"Fields are empty", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,getResources().getString(R.string.emptyFields), Toast.LENGTH_LONG).show();
         }
 
         else {
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (!task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this, "Sign In credentials failure", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, getResources().getString(R.string.credentialsError), Toast.LENGTH_LONG).show();
                     }
                 }
             });
