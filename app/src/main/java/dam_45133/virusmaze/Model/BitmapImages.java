@@ -62,9 +62,13 @@ public class BitmapImages {
         pacmanUp[3] = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
                 context.getResources(), R.drawable.pacman_up), spriteSize, spriteSize, false);
 
+
+        // Add bitmap image of vaccine
         vaccine = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
                 context.getResources(), R.drawable.vaccine), spriteSize, spriteSize, false);
 
+
+        // Add bitmap image of boost
         boost = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
                 context.getResources(), R.drawable.boost), spriteSize, spriteSize, false);
 

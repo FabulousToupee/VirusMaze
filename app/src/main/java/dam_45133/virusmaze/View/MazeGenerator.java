@@ -2,13 +2,13 @@ package dam_45133.virusmaze.View;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
-import dam_45133.virusmaze.Activities.PlayActivity;
-import dam_45133.virusmaze.GameConstants;
 import dam_45133.virusmaze.Model.Cell;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 
 public class MazeGenerator {

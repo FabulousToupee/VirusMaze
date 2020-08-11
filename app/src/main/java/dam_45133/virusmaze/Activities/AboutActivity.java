@@ -1,9 +1,9 @@
 package dam_45133.virusmaze.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 

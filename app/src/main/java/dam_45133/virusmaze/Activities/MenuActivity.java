@@ -1,19 +1,18 @@
 package dam_45133.virusmaze.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
-import dam_45133.virusmaze.GameConstants;
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class MenuActivity  extends AppCompatActivity {
     private static MediaPlayer player;
@@ -70,7 +69,6 @@ public class MenuActivity  extends AppCompatActivity {
 
     @Override
     public void onResume() {
-        Log.i("info", "MainActivity onResume");
         super.onResume();
         if (GameConstants.PLAY_MUSIC) {
             MenuActivity.getPlayer().start();

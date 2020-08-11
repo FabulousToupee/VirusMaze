@@ -1,13 +1,13 @@
 package dam_45133.virusmaze.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import dam_45133.virusmaze.GameConstants;
+import androidx.appcompat.app.AppCompatActivity;
+
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class PauseActivity extends AppCompatActivity {
 
@@ -32,5 +32,14 @@ public class PauseActivity extends AppCompatActivity {
         resumeIntent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(resumeIntent);
         this.finish();
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (GameConstants.PLAY_MUSIC) {
+            MenuActivity.getPlayer().start();
+        }
     }
 }

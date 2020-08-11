@@ -1,14 +1,17 @@
-package dam_45133.virusmaze;
+package dam_45133.virusmaze.Utils;
 
 import android.graphics.Color;
 
 import java.util.Random;
 
+import dam_45133.virusmaze.Activities.PlayActivity;
+import dam_45133.virusmaze.R;
+
 public class GameConstants {
 
 
     public static String DIFFICULTY = "Medium";
-    public static long PREPARATION_TIME = 0;
+    public static long PREPARATION_TIME = 20000;
     public static int LEVEL_TIME = 60000;
     public static long TIME_LEFT = PREPARATION_TIME;
     public static int ROWS = 15;
@@ -138,5 +141,45 @@ public class GameConstants {
         MAZE_COLOR = Color.rgb(255-Color.red(BACKGROUND_COLOR),
                 255-Color.green(BACKGROUND_COLOR),
                 255-Color.blue(BACKGROUND_COLOR));
+    }
+
+    public static String getGameDifficultyInSystemLanguage(){
+        switch(GameConstants.DIFFICULTY){
+            case "Easy":
+                return PlayActivity.getContext().getResources().getString(R.string.easyDifficulty);
+            case "Medium":
+                return PlayActivity.getContext().getResources().getString(R.string.mediumDifficulty);
+            case "Hard":
+                return PlayActivity.getContext().getResources().getString(R.string.hardDifficulty);
+            case "Expert":
+                return PlayActivity.getContext().getResources().getString(R.string.expertDifficulty);
+        }
+        return null;
+    }
+
+    public static void adjustGameAndPreparationTimers(){
+        if(GameConstants.PREPARATION_TIME > 0){
+            GameConstants.PREPARATION_TIME -= 2000;
+        }
+        else{
+            switch(GameConstants.DIFFICULTY){
+                case "Easy":
+                    if(GameConstants.TIME_LEFT > 30000)
+                        GameConstants.TIME_LEFT -= 1000;
+                    break;
+                case "Medium":
+                    if(GameConstants.TIME_LEFT > 40000)
+                        GameConstants.TIME_LEFT -= 1000;
+                    break;
+                case "Hard":
+                    if(GameConstants.TIME_LEFT > 60000)
+                        GameConstants.TIME_LEFT -= 1000;
+                    break;
+                case "Expert":
+                    if(GameConstants.TIME_LEFT > 90000)
+                        GameConstants.TIME_LEFT -= 1000;
+                    break;
+            }
+        }
     }
 }

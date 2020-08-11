@@ -27,8 +27,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-import dam_45133.virusmaze.GameConstants;
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class ScoresActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -64,8 +64,8 @@ public class ScoresActivity extends AppCompatActivity {
                 switch (position) {
                     case 0:
                         clearScroll();
-                        difficulty = getResources().getString(R.string.easyDifficulty);
-                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + difficulty).orderByValue().limitToLast(10);
+                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + getResources().getString(R.string.easyDifficulty)).
+                                orderByValue().limitToLast(10);
                         myTopPostsQuery.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -98,8 +98,8 @@ public class ScoresActivity extends AppCompatActivity {
                         break;
                     case 1:
                         clearScroll();
-                        difficulty = getResources().getString(R.string.mediumDifficulty);
-                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + difficulty).orderByValue().limitToLast(10);
+                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + getResources().getString(R.string.mediumDifficulty))
+                                .orderByValue().limitToLast(10);
                         myTopPostsQuery.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -132,8 +132,8 @@ public class ScoresActivity extends AppCompatActivity {
                         break;
                     case 2:
                         clearScroll();
-                        difficulty = getResources().getString(R.string.hardDifficulty);
-                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + difficulty).orderByValue().limitToLast(10);
+                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + getResources().getString(R.string.hardDifficulty)).
+                                orderByValue().limitToLast(10);
                         myTopPostsQuery.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -166,8 +166,8 @@ public class ScoresActivity extends AppCompatActivity {
                         break;
                     case 3:
                         clearScroll();
-                        difficulty = getResources().getString(R.string.expertDifficulty);
-                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + difficulty).orderByValue().limitToLast(10);
+                        myTopPostsQuery = new Firebase("https://virusmaze-bb1cc.firebaseio.com/Users/Scores/" + currentUser.getUid() + "/" + getResources().getString(R.string.expertDifficulty)).
+                                orderByValue().limitToLast(10);
                         myTopPostsQuery.addChildEventListener(new ChildEventListener() {
                             @Override
                             public void onChildAdded(DataSnapshot dataSnapshot, String s) {

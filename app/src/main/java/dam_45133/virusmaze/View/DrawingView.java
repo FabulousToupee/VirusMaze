@@ -11,15 +11,15 @@ import android.view.SurfaceView;
 import android.widget.Toast;
 
 import dam_45133.virusmaze.Activities.PlayActivity;
-import dam_45133.virusmaze.CountDownTimerPausable;
-import dam_45133.virusmaze.GameConstants;
 import dam_45133.virusmaze.Model.BitmapImages;
 import dam_45133.virusmaze.Model.Boost;
 import dam_45133.virusmaze.Model.Cell;
+import dam_45133.virusmaze.Model.CountDownTimerPausable;
 import dam_45133.virusmaze.Model.Direction;
 import dam_45133.virusmaze.Model.Player;
 import dam_45133.virusmaze.Model.Vaccine;
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class DrawingView extends SurfaceView{
     private MazeGenerator mazeGenerator;
@@ -111,9 +111,6 @@ public class DrawingView extends SurfaceView{
     }
 
 
-
-
-
     public void drawUserInterface(Canvas canvas, final Paint paint){
         paint.setTextSize(80f);
         paint.setColor(GameConstants.MAZE_COLOR);
@@ -121,22 +118,7 @@ public class DrawingView extends SurfaceView{
         else  drawTextAtXCenter(canvas,paint,getResources().getString(R.string.playingPhase),(screenHeight - GameConstants.ROWS * cellSize) / 12);
 
         paint.setTextSize(52f);
-        String difToPrint = "";
-        switch(GameConstants.DIFFICULTY){
-            case "Easy":
-                difToPrint = getResources().getString(R.string.easyDifficulty);
-                break;
-            case "Medium":
-                difToPrint = getResources().getString(R.string.mediumDifficulty);
-                break;
-            case "Hard":
-                difToPrint = getResources().getString(R.string.hardDifficulty);
-                break;
-            case "Expert":
-                difToPrint = getResources().getString(R.string.expertDifficulty);
-                break;
-        }
-        canvas.drawText(getResources().getString(R.string.levelDifficulty) + ": " + difToPrint,
+        canvas.drawText(getResources().getString(R.string.levelDifficulty) + ": " + GameConstants.getGameDifficultyInSystemLanguage(),
                 (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 7f,paint);
         canvas.drawText(getResources().getString(R.string.timeLeft) + ": " + GameConstants.TIME_LEFT + " " + getResources().getString(R.string.timeUnits),
                 (screenWidth - GameConstants.COLS * cellSize) / 2,(screenHeight - GameConstants.ROWS * cellSize) / 5f,paint);
@@ -153,9 +135,7 @@ public class DrawingView extends SurfaceView{
 
     public void checkVictory(){
         if (player.getCol() == GameConstants.VACCINE_X && player.getRow() == GameConstants.VACCINE_Y) {
-            if(GameConstants.PREPARATION_TIME > 0){
-                GameConstants.PREPARATION_TIME -= 2000;
-            }
+            GameConstants.adjustGameAndPreparationTimers();
             GameConstants.SCORE += GameConstants.TIME_LEFT * GameConstants.SCORE_MULTIPLIER * GameConstants.CURRENT_LEVEL;
             GameConstants.resetScoreMultiplier(GameConstants.DIFFICULTY);
             GameConstants.randomizeBoostLocation();

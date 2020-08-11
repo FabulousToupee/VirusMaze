@@ -3,8 +3,6 @@ package dam_45133.virusmaze.Model;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
-import dam_45133.virusmaze.GameConstants;
-
 public class Player{
     private Cell[][] maze;
     private int col,row,cellSize;

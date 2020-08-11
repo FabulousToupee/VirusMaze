@@ -2,12 +2,8 @@ package dam_45133.virusmaze.Model;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
 
 import java.util.Random;
-
-import dam_45133.virusmaze.GameConstants;
-import dam_45133.virusmaze.R;
 
 public class Boost {
 

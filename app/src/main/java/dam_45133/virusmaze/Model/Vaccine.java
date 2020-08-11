@@ -15,11 +15,6 @@ public class Vaccine {
 
     public void drawVaccine(BitmapImages bitmapImages, Canvas canvas, Paint paint){
         float margin = cellSize / 10;
-
         canvas.drawBitmap(bitmapImages.getVaccine(),this.col*cellSize + margin , this.row * cellSize + margin, paint);
     }
-
-    public int getCol() { return col; }
-
-    public int getRow() { return row; }
 }

@@ -1,15 +1,15 @@
-package dam_45133.virusmaze;
+package dam_45133.virusmaze.Model;
 
 import android.os.CountDownTimer;
 
 public abstract class CountDownTimerPausable {
-    long millisInFuture = 0;
-    long countDownInterval = 0;
-    long millisRemaining =  0;
+    private long millisInFuture;
+    private long countDownInterval;
+    private long millisRemaining;
 
-    CountDownTimer countDownTimer = null;
+    private CountDownTimer countDownTimer = null;
 
-    boolean isPaused = true;
+    private boolean isPaused = true;
 
     public CountDownTimerPausable(long millisInFuture, long countDownInterval) {
         super();
@@ -70,7 +70,7 @@ public abstract class CountDownTimerPausable {
      * later from the same point where it was paused.
      */
     public void pause()throws IllegalStateException{
-        if(isPaused==false){
+        if(!isPaused){
             countDownTimer.cancel();
         } else{
             throw new IllegalStateException("CountDownTimerPausable is already in pause state, start counter before pausing it.");

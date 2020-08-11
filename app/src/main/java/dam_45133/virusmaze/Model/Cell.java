@@ -2,7 +2,7 @@ package dam_45133.virusmaze.Model;
 
 public class Cell {
     private boolean topWall,leftWall, bottomWall, rightWall, visited;
-    int col, row;
+    private int col, row;
 
     public Cell(int col, int row) {
         this.col = col;
@@ -57,15 +57,8 @@ public class Cell {
         return col;
     }
 
-    public void setCol(int col) {
-        this.col = col;
-    }
-
     public int getRow() {
         return row;
     }
 
-    public void setRow(int row) {
-        this.row = row;
-    }
 }

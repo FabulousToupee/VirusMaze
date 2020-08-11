@@ -1,6 +1,7 @@
-package dam_45133.virusmaze;
+package dam_45133.virusmaze.Game;
 
 
+import dam_45133.virusmaze.Utils.GameConstants;
 import dam_45133.virusmaze.View.DrawingView;
 
 public class GameLoopLogic implements Runnable{
@@ -28,7 +29,6 @@ public class GameLoopLogic implements Runnable{
                 view.checkVictory();
                 lastUpdatedTime = currentTime;
                 currentPacmanFrame++;
-                System.out.println("Threads: " + Thread.activeCount());
             }
 
         }

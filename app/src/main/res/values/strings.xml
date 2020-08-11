@@ -53,5 +53,6 @@
     <string name="colors">Colors</string>
     <string name="doubleScore">Double Score</string>
     <string name="halfScore">Half Score</string>
+    <string name="mute">Mute</string>
 
 </resources>

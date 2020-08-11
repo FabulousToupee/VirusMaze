@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Objects;
 
-import dam_45133.virusmaze.GameConstants;
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class HelpActivity extends AppCompatActivity {
     @Override
@@ -24,7 +24,6 @@ public class HelpActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        MenuActivity.getPlayer().pause();
     }
 
     @Override

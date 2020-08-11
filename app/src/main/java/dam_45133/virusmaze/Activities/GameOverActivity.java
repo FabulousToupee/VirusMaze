@@ -1,24 +1,22 @@
 package dam_45133.virusmaze.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.firebase.client.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import dam_45133.virusmaze.CountDownTimerPausable;
-import dam_45133.virusmaze.GameConstants;
+import dam_45133.virusmaze.Model.CountDownTimerPausable;
 import dam_45133.virusmaze.R;
+import dam_45133.virusmaze.Utils.GameConstants;
 
 public class GameOverActivity extends AppCompatActivity {
     private MediaPlayer player;
