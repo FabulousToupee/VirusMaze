@@ -1,6 +1,6 @@
 <resources>
     <string name="play">Jugar</string>
-    <string name="highestScores">Mejor puntuacion</string>
+    <string name="scores">Puntuaciones</string>
     <string name="resume">Continuar</string>
     <string name="pause">Pausa</string>
     <string name="help">Ayuda</string>

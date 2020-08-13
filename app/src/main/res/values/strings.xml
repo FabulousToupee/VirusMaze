@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Virus Maze</string>
     <string name="play">Play</string>
-    <string name="highestScores">High Score</string>
+    <string name="scores">Scores</string>
     <string name="menu" translatable="false">Menu</string>
     <string name="resume">Resume</string>
     <string name="pause">Pause</string>
