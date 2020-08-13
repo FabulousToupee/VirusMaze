@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Virus Maze</string>
+    <string name="app_name" translatable="false">VirusMaze</string>
     <string name="play">Play</string>
     <string name="scores">Scores</string>
     <string name="menu" translatable="false">Menu</string>
