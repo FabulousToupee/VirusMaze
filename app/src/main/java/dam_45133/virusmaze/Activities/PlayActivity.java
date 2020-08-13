@@ -90,7 +90,7 @@ public class PlayActivity extends AppCompatActivity{
         AmbilWarnaDialog colorPicker = new AmbilWarnaDialog(this, GameConstants.BACKGROUND_COLOR, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
-
+                drawingView.timer.start();
             }
 
             @Override

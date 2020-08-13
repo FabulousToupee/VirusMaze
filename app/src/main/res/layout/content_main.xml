@@ -43,7 +43,7 @@
             android:layout_width="175dp"
             android:layout_height="65dp"
             android:onClick="showScoreScreen"
-            android:text="@string/highestScores" />
+            android:text="@string/scores" />
 
         <Button
             android:layout_width="175dp"

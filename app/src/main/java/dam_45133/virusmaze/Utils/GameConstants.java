@@ -14,7 +14,7 @@ public class GameConstants {
     public static String DIFFICULTY = "Medium";
     public static long PREPARATION_TIME = 20000;
     public static int LEVEL_TIME = 60000;
-    public static long TIME_LEFT = PREPARATION_TIME;
+    public static long TIME_LEFT = PREPARATION_TIME + LEVEL_TIME;
     public static int ROWS = 15;
     public static int COLS = 15;
 
@@ -22,7 +22,7 @@ public class GameConstants {
     public final static int WALL_THICKNESS = 4;
     public final static int GAME_SPEED = 20;
 
-    public static int[] NUMBERS = new int[]{0,14};
+    private static int[] NUMBERS = new int[]{0,14};
     private static int rnd = new Random().nextInt(NUMBERS.length);
     public static int STARTER_X = NUMBERS[rnd];
     private static int rnd2 = new Random().nextInt(NUMBERS.length);
@@ -175,20 +175,20 @@ public class GameConstants {
         else{
             switch(GameConstants.DIFFICULTY){
                 case "Easy":
-                    if(GameConstants.TIME_LEFT > 30000)
-                        GameConstants.TIME_LEFT -= 1000;
+                    if(GameConstants.LEVEL_TIME > 30000)
+                        GameConstants.LEVEL_TIME -= 1000;
                     break;
                 case "Medium":
-                    if(GameConstants.TIME_LEFT > 40000)
-                        GameConstants.TIME_LEFT -= 1000;
+                    if(GameConstants.LEVEL_TIME > 40000)
+                        GameConstants.LEVEL_TIME -= 1000;
                     break;
                 case "Hard":
-                    if(GameConstants.TIME_LEFT > 60000)
-                        GameConstants.TIME_LEFT -= 1000;
+                    if(GameConstants.LEVEL_TIME > 60000)
+                        GameConstants.LEVEL_TIME -= 1000;
                     break;
                 case "Expert":
-                    if(GameConstants.TIME_LEFT > 90000)
-                        GameConstants.TIME_LEFT -= 1000;
+                    if(GameConstants.LEVEL_TIME > 90000)
+                        GameConstants.LEVEL_TIME -= 1000;
                     break;
             }
         }
